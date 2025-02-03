@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dịch Vụ Phá Dỡ & Cắt Tỉa Chuyên Nghiệp - Tới Group</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+  <!-- Header -->
+  <header class="bg-green-600 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Tới Group</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#services" class="hover:underline">Dịch Vụ</a></li>
+          <li><a href="#about" class="hover:underline">Giới Thiệu</a></li>
+          <li><a href="#contact" class="hover:underline">Liên Hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-green-500 text-white py-16 text-center">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold mb-4">Chuyên Phá Dỡ, Khoan Cắt Bê Tông & Cắt Tỉa Cây Xanh</h2>
+      <p class="text-lg">An toàn - Nhanh chóng - Chuyên nghiệp</p>
+      <a href="#contact" class="mt-6 inline-block bg-white text-green-600 px-6 py-3 rounded-full font-semibold">Liên Hệ Ngay</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-8">Dịch Vụ Của Chúng Tôi</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white shadow-lg p-6 rounded-lg text-center">
+          <h4 class="text-2xl font-semibold mb-4">Phá Dỡ Nhà</h4>
+          <p>Chúng tôi cung cấp dịch vụ phá dỡ nhà an toàn và nhanh chóng.</p>
+        </div>
+        <!-- Service 2 -->
+        <div class="bg-white shadow-lg p-6 rounded-lg text-center">
+          <h4 class="text-2xl font-semibold mb-4">Khoan Cắt Bê Tông</h4>
+          <p>Khoan cắt bê tông chính xác, gọn gàng và hiệu quả cao.</p>
+        </div>
+        <!-- Service 3 -->
+        <div class="bg-white shadow-lg p-6 rounded-lg text-center">
+          <h4 class="text-2xl font-semibold mb-4">Cắt Tỉa Cây Xanh</h4>
+          <p>Châm sóc và cắt tỉa cây xanh chuyên nghiệp, an toàn.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-gray-100 py-16">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-8">Giới Thiệu</h3>
+      <p class="text-lg text-center">Tới Group là đơn vị uy tín với nhiều năm kinh nghiệm trong lĩnh vực phá dỡ, khoan cắt bê tông và cắt tỉa cây xanh. Chúng tôi cam kết mang đến dịch vụ nhanh chóng, an toàn và chuyên nghiệp cho mọi công trình.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-8">Liên Hệ</h3>
+      <form action="#" method="POST" class="max-w-lg mx-auto bg-white shadow-lg p-8 rounded-lg">
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-semibold">Họ Tên</label>
+          <input type="text" id="name" name="name" class="w-full border-gray-300 rounded-lg p-2">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-semibold">Email</label>
+          <input type="email" id="email" name="email" class="w-full border-gray-300 rounded-lg p-2">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-semibold">Tin Nhắn</label>
+          <textarea id="message" name="message" rows="4" class="w-full border-gray-300 rounded-lg p-2"></textarea>
+        </div>
+        <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold w-full">Gửi Liên Hệ</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-600 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Tới Group. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
